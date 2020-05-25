@@ -1,0 +1,24 @@
+[package]
+name = "circuit-exchange-format"
+version = "0.1.0"
+authors = ["Daniel Arbuckle <daniel@arbuckle-everything.com>"]
+edition = "2018"
+
+[lib]
+name = "exchangeformat"
+path = "src/lib.rs"
+
+[[bin]]
+name = "validate"
+path = "src/bin/validate.rs"
+
+[[bin]]
+name = "digest"
+path = "src/bin/digest.rs"
+
+[dependencies]
+serde = {version = "1.0.110", features = ["derive"]}
+serde_json = "1.0.53"
+thiserror = "1.0.19"
+anyhow = "1.0.31"
+fltk = "0.4.13"
